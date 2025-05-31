@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chat App</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <!--Navbar -->
+  <nav class="navbar">
+    <button class="hamburger" id="sidebarToggle">&#9776;</button>
+    <span class="navbar-title">Messenger</span>
+    <button id="darkModeToggle" title="Toggle dark mode"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path fill-rule="nonzero" d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></g></svg></button>
+  </nav>
+  <div class="container">
+    <!-- Left Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <span class="sidebar-title">Chats</span>
+        <button class="menu-btn" id="menuBtn" title="Menu">&#8942;</button>
+      </div>
+      <div class="sidebar-search">
+        <input type="text" placeholder="Search Friends" />
+      </div>
+      <ul class="chat-list">
+         <li onclick="switchChat('emma')" id="chat-emma" class="active">
+          <div class="avatar">E</div>
+          <div class="info">
+            <span class="name">Emma Thompson</span>
+            <span class="preview">I've sent you the latest project files.</span>
+          </div>
+        </li>
+       
+        <li onclick="switchChat('sophia')" id="chat-sophia">
+          <div class="avatar">S</div>
+          <div class="info">
+            <span class="name">Sophia Thompson</span>
+            <span class="preview">The design team loved your presentation!</span>
+          </div>
+        </li>
+        
+         <li onclick="switchChat('michael')" id="chat-michael">
+          <div class="avatar">M</div>
+          <div class="info">
+            <span class="name">Michael Thompson</span>
+            <span class="preview">Are we still meeting at 3?</span>
+          </div>
+        </li>
+        <li onclick="switchChat('john')" id="chat-john">
+          <div class="avatar">J</div>
+          <div class="info">
+            <span class="name">John Doe</span>
+            <span class="preview">Hey, how's it going?</span>
+          </div>
+        </li>
+        <li onclick="switchChat('jane')" id="chat-jane">
+          <div class="avatar">J</div>
+          <div class="info">
+            <span class="name">Jane Smith</span>
+            <span class="preview">Did you finish the report?</span>
+          </div>
+        </li>
+        <li onclick="switchChat('alex')" id="chat-alex">
+          <div class="avatar">A</div>
+          <div class="info">
+            <span class="name">Alex Johnson</span>
+            <span class="preview">Let's catch up over coffee!</span>
+          </div>
+        </li>
+        <li onclick="switchChat('linda')" id="chat-linda">
+          <div class="avatar">L</div>
+          <div class="info">
+            <span class="name">Linda Brown</span>
+            <span class="preview">Can you review my code?</span>
+          </div>
+        </li>
+       
+      </ul>
+    </aside>
+    <div class="sidebar-backdrop" id="sidebarBackdrop">
+      <button class="hamburger" id="sidebarToggle">&#9776;</button>
+    </div>
+    <!-- Main Chat Area -->
+    <main class="chat-main">
+      <header class="chat-header">
+  <div class="avatar" id="chat-avatar">E</div>
+    <div class="chat-header-info">
+    <span id="chat-name">Emma Thompson</span>
+    <span id="chat-status" class="chat-status">Online</span>
+  </div>
+  <div class="chat-header-actions">
+    <button class="chat-header-btn" title="Voice Call">
+      <svg viewBox="0 0 12 13" width="20" height="20" fill="currentColor" aria-hidden="true" class="xfx01vb x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq" style="--color: var(--primary-icon);"><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M109.492 925.682a1.154 1.154 0 0 0-.443-.81 10.642 10.642 0 0 0-1.158-.776l-.211-.125c-.487-.29-.872-.514-1.257-.511a3.618 3.618 0 0 0-.693.084c-.304.07-.6.302-.88.69a3.365 3.365 0 0 0-.297.494l.449.22-.507-.202-.13-.074a8.53 8.53 0 0 1-3.04-3.043l-.071-.124.019-.057v-.001c.168-.083.334-.183.492-.297.162-.117.552-.432.681-.842.063-.2.075-.407.086-.59l.007-.116c.029-.389-.197-.764-.482-1.237l-.153-.256c-.322-.55-.6-.933-.775-1.158a1.155 1.155 0 0 0-.811-.443c-.36-.031-1.066.01-1.748.608-1.018.896-1.326 2.25-.845 3.714a11.734 11.734 0 0 0 2.834 4.612 11.732 11.732 0 0 0 4.61 2.833c.455.149.897.222 1.32.222.94 0 1.777-.364 2.395-1.067.599-.681.639-1.387.608-1.748" transform="translate(-450 -1073) translate(352.5 157)"></path></g></svg>
+    </button>
+    <button class="chat-header-btn" title="Video Call">
+      <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M17 10.5V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3.5l4 4v-11l-4 4Z"/></svg>
+    </button>
+    <button class="chat-header-btn" title="Info">
+      <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><rect x="11" y="10" width="2" height="6" rx="1" fill="currentColor"/><rect x="11" y="7" width="2" height="2" rx="1" fill="currentColor"/></svg>
+    </button>
+  </div>
+</header>
+      <section class="chat-area" id="chat-area"></section>
+      <footer class="chat-input">
+        <button id="emojiBtn" title="Add emoji">😊</button>
+        <input type="file" id="imageInput" accept="image/*" style="display:none;">
+        <button id="imageBtn" title="Send picture">📷</button>
+        <textarea id="messageInput" rows="1" placeholder="Type a message..."></textarea>
+        <button onclick="sendMessage()" id="sendBtn">➤</button>
+      </footer>
+      <div id="emojiPicker" class="emoji-picker"></div>
+    </main>
+    <!-- Right Panel -->
+    <aside class="right-panel" id="rightPanel">
+      <div id="profileDetails"></div>
+      <h3 style="margin-top:2rem;">Active Members</h3>
+      <ul class="active-members" id="activeMembers"></ul>
+    </aside>
+  </div>
+ 
+  <script src="script.js"></script>
+</body>
+</html>
